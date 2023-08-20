@@ -3,8 +3,10 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      "home-section-bg": "url('@/assets/background.jpg')",
+      backgroundImage: {
+        "home-section": "url('./src/assets/background.jpg')",
+      },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 };
