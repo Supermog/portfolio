@@ -5,3 +5,15 @@
 body {
   margin: 0;
 }
+
+html {
+  font-family: monospace;
+}
+
+.link {
+  @apply font-semibold text-xl;
+}
+
+.link-bottom-border {
+  @apply h-px w-full bg-transparent group-hover:bg-gradient-to-r from-purple-500 to-blue-500 group-hover:animate-in group-hover:fade-in;
+}
