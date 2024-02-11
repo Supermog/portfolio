@@ -1,4 +1,5 @@
 import { Header } from "./components/header";
+import { AboutSection } from "./sections/about-section";
 import { HomeSection } from "./sections/home-section";
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
       </header>
       <main className="min-h-screen">
         <HomeSection />
-        asdf
+        <AboutSection />
       </main>
     </div>
   );
