@@ -11,15 +11,15 @@ function Header() {
           Home
           <div className="link-bottom-border" />
         </a>
-        <a href="#" className="link group">
+        <a href="#about" className="link group">
           About
           <div className="link-bottom-border" />
         </a>
-        <a href="#" className="link group">
+        <a href="#projects" className="link group">
           Projects
           <div className="link-bottom-border" />
         </a>
-        <a href="#" className="link group">
+        <a href="#contact" className="link group">
           Contact
           <div className="link-bottom-border" />
         </a>
