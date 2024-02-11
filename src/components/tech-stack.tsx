@@ -1,11 +1,11 @@
-import javascriptLogo from "@/assets/javascript-logo.png";
-import reactLogo from "@/assets/react-logo.png";
-import tailwindLogo from "@/assets/tailwind-logo.png";
-import nextJsLogo from "@/assets/next-js-logo.png";
+import javascriptLogo from "@/assets/tech-stack-logos/javascript-logo.png";
+import reactLogo from "@/assets/tech-stack-logos/react-logo.png";
+import tailwindLogo from "@/assets/tech-stack-logos/tailwind-logo.png";
+import nextJsLogo from "@/assets/tech-stack-logos/next-js-logo.png";
 // import nestJsLogo from "@/assets/nest-js-logo.png";
-import nodeJsLogo from "@/assets/node-js-logo.png";
-import firebaseLogo from "@/assets/firebase-logo.png";
-import mongodbLogo from "@/assets/mongodb-logo.png";
+import nodeJsLogo from "@/assets/tech-stack-logos/node-js-logo.png";
+import firebaseLogo from "@/assets/tech-stack-logos/firebase-logo.png";
+import mongodbLogo from "@/assets/tech-stack-logos/mongodb-logo.png";
 
 function TechStack() {
   return (
