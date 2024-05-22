@@ -1,6 +1,7 @@
 import { Header } from "./components/header";
 import { AboutSection } from "./sections/about-section";
 import { HomeSection } from "./sections/home-section";
+import { ProjectsSection } from "./sections/projects-section";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <main className="min-h-screen">
         <HomeSection />
         <AboutSection />
+        <ProjectsSection />
       </main>
     </div>
   );

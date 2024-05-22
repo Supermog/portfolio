@@ -10,6 +10,7 @@ html {
   font-family: monospace;
   color: white;
   background-color: black;
+  scroll-behavior: smooth;
 }
 
 .link {
@@ -18,4 +19,8 @@ html {
 
 .link-bottom-border {
   @apply h-px w-full bg-transparent group-hover:bg-gradient-to-r from-purple-500 to-blue-500 group-hover:animate-in group-hover:fade-in;
+}
+
+.tooltip {
+  @apply !z-10 !rounded-lg !bg-black !px-3 !py-2 !opacity-100;
 }

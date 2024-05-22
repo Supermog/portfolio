@@ -7,10 +7,10 @@ function HomeSection() {
     <section className="h-screen flex flex-col">
       <img
         src={homeSectionBackground}
-        className="absolute object-cover h-screen w-full -z-10"
+        className="absolute object-cover min-h-screen w-full -z-10"
       />
-      <div className="flex justify-center gap-24 h-full items-center self-center container flex-col">
-        <div className="flex justify-center items-center gap-24 -mt-20">
+      <div className="flex justify-center gap-24 h-full items-center self-center p-5 flex-col">
+        <div className="flex justify-center items-center gap-24 lg:-mt-20">
           <div className="flex flex-col max-w-xl gap-3">
             <h1 className="text-4xl text-white  p-2 rounded-md">
               JavaScript Full-Stack Developer
@@ -20,7 +20,7 @@ function HomeSection() {
               JavaScript developer based in Hungary 🇭🇺
             </p>
           </div>
-          <img src={selfPic} className="h-96 rounded-3xl" />
+          <img src={selfPic} className="h-96 rounded-3xl sm:block hidden" />
         </div>
         <TechStack />
       </div>
