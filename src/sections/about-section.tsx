@@ -3,8 +3,8 @@ import { RevealOnScroll } from "../components/reveal-on-scroll";
 
 function AboutSection() {
   return (
-    <section className="min-h-screen flex flex-col bg-gray-950" id="about">
-      <div className="flex flex-col justify-center items-center h-screen md:my-10 my-20">
+    <section className="min-h-screen bg-gray-950" id="about">
+      <div className="h-screen md:my-10 my-20 flex items-center justify-center">
         <RevealOnScroll>
           <div className="flex gap-10 container md:flex-row flex-col justify-center items-center px-10">
             <div className="flex justify-center items-center sm:block hidden">
