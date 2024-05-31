@@ -7,7 +7,6 @@ import tailwindLogo from "@/assets/tech-stack-logos/tailwind-logo.png";
 import firebaseLogo from "@/assets/tech-stack-logos/firebase-logo.png";
 import airtableLogo from "@/assets/tech-stack-logos/airtable-logo.png";
 import { FaUpRightFromSquare } from "react-icons/fa6";
-import { useState } from "react";
 
 const projects = [
   {
