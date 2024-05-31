@@ -3,8 +3,8 @@ import { RevealOnScroll } from "../components/reveal-on-scroll";
 
 function AboutSection() {
   return (
-    <section className="min-h-screen bg-gray-950" id="about">
-      <div className="h-screen md:my-10 my-20 flex items-center justify-center">
+    <section className="min-h-screen bg-gray-950 md:py-10 py-20" id="about">
+      <div className="min-h-screen flex items-center justify-center">
         <RevealOnScroll>
           <div className="flex gap-10 container md:flex-row flex-col justify-center items-center px-10">
             <div className="flex justify-center items-center sm:block hidden">
@@ -13,8 +13,7 @@ function AboutSection() {
             <div className="flex flex-col md:w-[70%]">
               <p className="text-xl text-cyan-300 mb-5">About Me</p>
               <p className="text-2xl mb-3">
-                A dedicated Full-Stack developer with a focus on Front-End based
-                in Veszprém, Hungary 📍
+                A dedicated Full-Stack developer based in Hungary 📍
               </p>
               <p className="text-lg text-gray-300">
                 From a young age, I've been fascinated by the endless

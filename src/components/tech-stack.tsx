@@ -32,7 +32,7 @@ function TechStack() {
           src={tailwindLogo}
           className="h-9 hover:cursor-pointer"
           data-tooltip-id="technology"
-          data-tooltip-content="TailwindCSS"
+          data-tooltip-content="Tailwind CSS"
         />
         <img
           src={nextJsLogo}
