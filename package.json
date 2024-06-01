@@ -14,7 +14,8 @@
     "react-dom": "^18.2.0",
     "react-icons": "^5.2.1",
     "react-tooltip": "^5.26.4",
-    "tailwindcss-animated": "^1.0.1"
+    "tailwindcss-animated": "^1.0.1",
+    "yet-another-react-lightbox": "^3.19.0"
   },
   "devDependencies": {
     "@types/node": "^20.5.1",

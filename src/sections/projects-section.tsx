@@ -7,6 +7,9 @@ import tailwindLogo from "@/assets/tech-stack-logos/tailwind-logo.png";
 import firebaseLogo from "@/assets/tech-stack-logos/firebase-logo.png";
 import airtableLogo from "@/assets/tech-stack-logos/airtable-logo.png";
 import { FaUpRightFromSquare } from "react-icons/fa6";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+import { useState } from "react";
 
 const projects = [
   {
@@ -42,6 +45,8 @@ const projects = [
 ];
 
 function ProjectsSection() {
+  const [lightboxImage, setLightboxImage] = useState("");
+
   return (
     <section className="my-10 container min-w-full pswp-gallery">
       <div className="flex justify-center items-center flex-col">
@@ -55,7 +60,11 @@ function ProjectsSection() {
           {projects.map((project) => {
             return (
               <div className="flex md:flex-row flex-col-reverse gap-10">
-                <img src={project.image} className="w-[400px] object-contain" />
+                <img
+                  src={project.image}
+                  className="w-[400px] object-contain hover:cursor-pointer"
+                  onClick={() => setLightboxImage(project.image)}
+                />
                 <div>
                   <p className="text-lg mb-5">{project.title}</p>
                   <p className="text-gray-300">{project.description}</p>
@@ -86,6 +95,11 @@ function ProjectsSection() {
           })}
         </div>
       </div>
+      <Lightbox
+        open={Boolean(lightboxImage)}
+        close={() => setLightboxImage("")}
+        slides={[{ src: lightboxImage }]}
+      />
     </section>
   );
 }
