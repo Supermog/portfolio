@@ -11,55 +11,63 @@ import { Tooltip } from "react-tooltip";
 function TechStack() {
   return (
     <div className="flex lg:flex-row flex-col items-center gap-5 bg-gray-950 p-3 rounded-xl">
-      <Tooltip id="technology" className="tooltip" />
+      <Tooltip id="technology" className="tooltip" noArrow />
       <p className="text-xl lg:border-r-2 lg:pr-5 lg:pb-0 pb-5 mb-5 lg:mb-0 lg:border-b-0 border-b-2">
         Tech Stack
       </p>
       <div className="gap-12 grid grid-rows-2 grid-flow-col lg:flex lg:items-center">
         <img
           src={typescriptLogo}
+          alt="typescript"
           className="h-14 hover:cursor-pointer"
           data-tooltip-id="technology"
           data-tooltip-content="TypeScript"
         />
         <img
           src={reactLogo}
+          alt="react"
           className="h-14 hover:cursor-pointer"
           data-tooltip-id="technology"
           data-tooltip-content="React"
         />
         <img
           src={tailwindLogo}
+          alt="tailwind css"
           className="h-9 hover:cursor-pointer"
           data-tooltip-id="technology"
           data-tooltip-content="Tailwind CSS"
         />
         <img
           src={nextJsLogo}
+          alt="next js"
           className="h-14 hover:cursor-pointer"
           data-tooltip-id="technology"
           data-tooltip-content="NextJS"
         />
         <img
           src={nodeJsLogo}
+          alt="node js"
           className="h-14 hover:cursor-pointer"
           data-tooltip-id="technology"
           data-tooltip-content="NodeJS"
         />
         <img
           src={nestJsLogo}
+          alt="nest js"
           className="h-14 hover:cursor-pointer"
           data-tooltip-id="technology"
           data-tooltip-content="NestJS"
         />
         <img
           src={firebaseLogo}
+          alt="firebase"
           className="h-14 hover:cursor-pointer"
           data-tooltip-id="technology"
           data-tooltip-content="Firebase"
         />
         <img
           src={mongodbLogo}
+          alt="mongodb"
           className="h-14 hover:cursor-pointer"
           data-tooltip-id="technology"
           data-tooltip-content="MongoDB"
