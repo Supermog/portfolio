@@ -28,14 +28,14 @@ function ContactSection() {
   return (
     <section id="contact" className="mb-40">
       <div className="flex justify-center items-center flex-col">
-        <div className="mb-10">
+        <div className="mb-10 px-5">
           <p className="text-2xl text-cyan-300 mb-5">Contact</p>
           <p className="text-xl">
             Do you have any cool ideas to build? Let's chat!
           </p>
         </div>
-        <div className="flex gap-20">
-          <div className="w-[400px]">
+        <div className="flex gap-20 lg:flex-row flex-col-reverse">
+          <div className="sm:min-w-[400px] min-w-[300px] sm:px-0 px-5">
             <FormProvider {...form}>
               <form
                 onSubmit={form.handleSubmit(onSubmit)}
@@ -63,18 +63,13 @@ function ContactSection() {
               </form>
             </FormProvider>
           </div>
-          <div>
-            <div className="flex items-center space-x-5">
-              <img className="rounded-full h-[150px]" src={roundedSelfPic} />
-              <div className="mb-5">
-                <p>Email:</p>
-                <a
-                  href="mailto:brian67531@gmail.com"
-                  className="hover:underline"
-                >
-                  brian67531@gmail.com
-                </a>
-              </div>
+          <div className="flex items-center gap-5 sm:flex-row flex-col">
+            <img className="rounded-full h-[150px]" src={roundedSelfPic} />
+            <div className="mb-5">
+              <p>Email:</p>
+              <a href="mailto:brian67531@gmail.com" className="hover:underline">
+                brian67531@gmail.com
+              </a>
             </div>
           </div>
         </div>
