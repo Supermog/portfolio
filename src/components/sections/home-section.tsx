@@ -1,6 +1,6 @@
 import homeSectionBackground from "@/assets/home-section-background.jpg";
 import selfPic from "@/assets/self-pic.jpg";
-import { TechStack } from "../components/tech-stack";
+import { TechStack } from "../tech-stack";
 
 function HomeSection() {
   return (

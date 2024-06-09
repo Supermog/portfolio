@@ -1,10 +1,10 @@
 import aboutSectionPic from "@/assets/about-section-pic.png";
-import { RevealOnScroll } from "../components/reveal-on-scroll";
+import { RevealOnScroll } from "../reveal-on-scroll";
 
 function AboutSection() {
   return (
-    <section className="min-h-screen bg-gray-950 md:py-10 py-20" id="about">
-      <div className="min-h-screen flex items-center justify-center">
+    <section className="bg-gray-950 md:py-10 py-20" id="about">
+      <div className="flex items-center justify-center my-64">
         <RevealOnScroll>
           <div className="flex gap-10 container md:flex-row flex-col justify-center items-center px-10">
             <div className="flex justify-center items-center sm:block hidden">

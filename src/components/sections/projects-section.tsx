@@ -13,9 +13,10 @@ import { FaUpRightFromSquare } from "react-icons/fa6";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import { useState } from "react";
-import { RevealOnScroll } from "../components/reveal-on-scroll";
+import { RevealOnScroll } from "../reveal-on-scroll";
 import perlegoKnowledgeBase from "@/assets/project-pics/perlego-knowledge-base.png";
 import scottlogic from "@/assets/project-pics/scottlogic.png";
+import nodeJsLogo from "@/assets/tech-stack-logos/node-js-logo.png";
 
 const projects = [
   {
@@ -43,6 +44,7 @@ const projects = [
       { name: "React", logo: reactLogo },
       { name: "Tailwind CSS", logo: tailwindLogo },
       { name: "Firebase", logo: firebaseLogo },
+      { name: "NodeJS", logo: nodeJsLogo },
       { name: "Airtable", logo: airtableLogo },
     ],
     href: "https://blackford-navigator.netlify.app/",
@@ -92,7 +94,7 @@ function ProjectsSection() {
   const [lightboxImage, setLightboxImage] = useState("");
 
   return (
-    <section className="my-10 container min-w-full pswp-gallery">
+    <section className="my-64 container min-w-full pswp-gallery" id="projects">
       <div className="flex justify-center items-center flex-col">
         <div className="mb-10">
           <p className="text-xl text-cyan-300 mb-5">Projects</p>

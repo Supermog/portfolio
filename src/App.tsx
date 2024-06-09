@@ -1,7 +1,8 @@
 import { Header } from "./components/header";
-import { AboutSection } from "./sections/about-section";
-import { HomeSection } from "./sections/home-section";
-import { ProjectsSection } from "./sections/projects-section";
+import { ContactSection } from "./components/sections/contact-section";
+import { AboutSection } from "./components/sections/about-section";
+import { HomeSection } from "./components/sections/home-section";
+import { ProjectsSection } from "./components/sections/projects-section";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <HomeSection />
         <AboutSection />
         <ProjectsSection />
+        <ContactSection />
       </main>
     </div>
   );
