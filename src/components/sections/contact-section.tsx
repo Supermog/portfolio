@@ -4,11 +4,14 @@ import { TextInput } from "../form-fields/text-input";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Textarea } from "../form-fields/text-area";
 import roundedSelfPic from "@/assets/rounded-self-pic.jpg";
+import axios, { AxiosError, AxiosResponse } from "axios";
+import toast from "react-hot-toast";
 
 const schema = yup.object({
   email: yup.string().email().required().label("Email"),
-  subject: yup.string().min(2).required().label("Subject"),
-  message: yup.string().min(10).required().label("Message"),
+  subject: yup.string().required().label("Subject"),
+  message: yup.string().required().label("Message"),
+  name: yup.string().required().label("Name"),
 });
 
 type ContactFormData = yup.InferType<typeof schema>;
@@ -20,10 +23,27 @@ function ContactSection() {
       email: "",
       subject: "",
       message: "",
+      name: "",
     },
   });
 
-  const onSubmit = (data: ContactFormData) => console.log(data);
+  const onSubmit = async (data: ContactFormData) => {
+    try {
+      const response = await axios.post<
+        AxiosError,
+        AxiosResponse<string>,
+        ContactFormData
+      >(`${import.meta.env.VITE_API_BASE_URL}/email`, data);
+
+      toast.success(response.data);
+    } catch (error) {
+      const axiosError = error as AxiosError;
+
+      const errorMessage = axiosError.response?.data;
+
+      toast.error(`Something unexpected happened: ${errorMessage}`);
+    }
+  };
 
   return (
     <section id="contact" className="mb-40">
@@ -47,6 +67,11 @@ function ContactSection() {
                   label="Your Email"
                 />
                 <TextInput
+                  name="name"
+                  placeholder="Brian Brooks"
+                  label="Your Name"
+                />
+                <TextInput
                   name="subject"
                   placeholder="Very interesting subject"
                   label="Subject"
@@ -57,7 +82,7 @@ function ContactSection() {
                   label="Your Message"
                   rows={5}
                 />
-                <button className="btn btn-primary w-full !mt-10">
+                <button className="btn btn-primary w-full !mt-10" type="submit">
                   Send Message
                 </button>
               </form>
