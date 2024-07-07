@@ -6,6 +6,7 @@ import { Textarea } from "../form-fields/text-area";
 import roundedSelfPic from "@/assets/rounded-self-pic.jpg";
 import axios, { AxiosError, AxiosResponse } from "axios";
 import toast from "react-hot-toast";
+import { useState } from "react";
 
 const schema = yup.object({
   email: yup.string().email().required().label("Email"),
@@ -17,6 +18,7 @@ const schema = yup.object({
 type ContactFormData = yup.InferType<typeof schema>;
 
 function ContactSection() {
+  const [isMessageSuccess, setIsMessageSuccess] = useState(false);
   const form = useForm({
     resolver: yupResolver(schema),
     defaultValues: {
@@ -35,6 +37,8 @@ function ContactSection() {
         ContactFormData
       >(`${import.meta.env.VITE_API_BASE_URL}/email`, data);
 
+      setIsMessageSuccess(true);
+
       toast.success(response.data);
     } catch (error) {
       const axiosError = error as AxiosError;
@@ -44,7 +48,6 @@ function ContactSection() {
       toast.error(`Something unexpected happened: ${errorMessage}`);
     }
   };
-
   return (
     <section id="contact" className="mb-40">
       <div className="flex justify-center items-center flex-col">
@@ -56,37 +59,68 @@ function ContactSection() {
         </div>
         <div className="flex gap-20 lg:flex-row flex-col-reverse">
           <div className="sm:min-w-[400px] min-w-[300px] sm:px-0 px-5">
-            <FormProvider {...form}>
-              <form
-                onSubmit={form.handleSubmit(onSubmit)}
-                className="space-y-5"
-              >
-                <TextInput
-                  name="email"
-                  placeholder="your@email.com"
-                  label="Your Email"
-                />
-                <TextInput
-                  name="name"
-                  placeholder="Brian Brooks"
-                  label="Your Name"
-                />
-                <TextInput
-                  name="subject"
-                  placeholder="Very interesting subject"
-                  label="Subject"
-                />
-                <Textarea
-                  name="message"
-                  placeholder="Tell me about your idea.."
-                  label="Your Message"
-                  rows={5}
-                />
-                <button className="btn btn-primary w-full !mt-10" type="submit">
-                  Send Message
-                </button>
-              </form>
-            </FormProvider>
+            {isMessageSuccess ? (
+              <div className="w-[400px] h-[425px]">
+                <svg width="100%" height="100%">
+                  <circle
+                    fill="none"
+                    stroke="#61d345"
+                    strokeWidth="20"
+                    cx="200"
+                    cy="200"
+                    r="190"
+                    strokeLinecap="round"
+                    transform="rotate(-90 200 200)"
+                    className="circle"
+                  />
+                  <polyline
+                    fill="none"
+                    stroke="#61d345"
+                    points="88,214 173,284 304,138"
+                    strokeWidth="24"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="tick"
+                  />
+                </svg>
+              </div>
+            ) : (
+              <FormProvider {...form}>
+                <form
+                  onSubmit={form.handleSubmit(onSubmit)}
+                  className="space-y-5"
+                >
+                  <TextInput
+                    name="email"
+                    placeholder="your@email.com"
+                    label="Your Email"
+                  />
+                  <TextInput
+                    name="name"
+                    placeholder="Brian Brooks"
+                    label="Your Name"
+                  />
+                  <TextInput
+                    name="subject"
+                    placeholder="Very interesting subject"
+                    label="Subject"
+                  />
+                  <Textarea
+                    name="message"
+                    placeholder="Tell me about your idea.."
+                    label="Your Message"
+                    rows={5}
+                  />
+                  <button
+                    className="btn btn-primary w-full !mt-10"
+                    type="submit"
+                    disabled={form.formState.isSubmitting}
+                  >
+                    Send Message
+                  </button>
+                </form>
+              </FormProvider>
+            )}
           </div>
           <div className="flex items-center gap-5 sm:flex-row flex-col">
             <img className="rounded-full h-[150px]" src={roundedSelfPic} />
