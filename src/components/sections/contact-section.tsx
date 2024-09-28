@@ -6,7 +6,8 @@ import { Textarea } from "../form-fields/text-area";
 import roundedSelfPic from "@/assets/rounded-self-pic.jpg";
 import axios, { AxiosError, AxiosResponse } from "axios";
 import toast from "react-hot-toast";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const schema = yup.object({
   email: yup.string().email().required().label("Email"),
@@ -19,6 +20,7 @@ type ContactFormData = yup.InferType<typeof schema>;
 
 function ContactSection() {
   const [isMessageSuccess, setIsMessageSuccess] = useState(false);
+  const [isVerified, setIsVerified] = useState(false);
   const form = useForm({
     resolver: yupResolver(schema),
     defaultValues: {
@@ -29,7 +31,12 @@ function ContactSection() {
     },
   });
 
+  const captchaRef = useRef<ReCAPTCHA | null>(null);
+
   const onSubmit = async (data: ContactFormData) => {
+    if (!isVerified) {
+      return toast.error("You need to complete reCAPTCHA!");
+    }
     try {
       const response = await axios.post<
         AxiosError,
@@ -48,6 +55,24 @@ function ContactSection() {
       toast.error(`Something unexpected happened: ${errorMessage}`);
     }
   };
+
+  const handleVerify = async (token: string) => {
+    try {
+      await axios.post<AxiosError, AxiosResponse<string>, { token: string }>(
+        `${import.meta.env.VITE_API_BASE_URL}/verify-captcha`,
+        { token }
+      );
+
+      setIsVerified(true);
+    } catch (error) {
+      const axiosError = error as AxiosError;
+
+      const errorMessage = axiosError.response?.data;
+
+      toast.error(`Something unexpected happened: ${errorMessage}`);
+    }
+  };
+
   return (
     <section id="contact" className="mb-40">
       <div className="flex justify-center items-center flex-col">
@@ -111,6 +136,15 @@ function ContactSection() {
                     label="Your Message"
                     rows={5}
                   />
+                  <div className="flex justify-center">
+                    <ReCAPTCHA
+                      sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY || ""}
+                      ref={captchaRef}
+                      theme="dark"
+                      size="normal"
+                      onChange={(token) => handleVerify(token || "")}
+                    />
+                  </div>
                   <button
                     className="btn btn-primary w-full !mt-10"
                     type="submit"
@@ -126,8 +160,11 @@ function ContactSection() {
             <img className="rounded-full h-[150px]" src={roundedSelfPic} />
             <div className="mb-5">
               <p>Email:</p>
-              <a href="mailto:brian67531@gmail.com" className="hover:underline">
-                brian67531@gmail.com
+              <a
+                href="mailto:nagyzsbalint@gmail.com"
+                className="hover:underline"
+              >
+                nagyzsbalint@gmail.com
               </a>
             </div>
           </div>
