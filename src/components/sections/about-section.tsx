@@ -1,10 +1,35 @@
 import aboutSectionPic from "@/assets/about-section-pic.png";
 import { RevealOnScroll } from "../reveal-on-scroll";
+import { Code, Globe, Users, Lightbulb } from "lucide-react";
+import SkillCard from "../skill-card";
+
+const skills = [
+  {
+    icon: Code,
+    title: "Frontend Development",
+    description: "React, TypeScript, Tailwind CSS",
+  },
+  {
+    icon: Globe,
+    title: "Backend Development",
+    description: "Node.js, APIs, AWS, Database Design",
+  },
+  {
+    icon: Users,
+    title: "Team Collaboration",
+    description: "Agile, Communication, Leadership",
+  },
+  {
+    icon: Lightbulb,
+    title: "Problem Solving",
+    description: "Creative Solutions, Innovation",
+  },
+];
 
 function AboutSection() {
   return (
     <section className="bg-gray-950 md:py-10 py-20" id="about">
-      <div className="flex items-center justify-center my-64">
+      <div className="flex items-center justify-center my-10">
         <RevealOnScroll>
           <div className="flex gap-10 container md:flex-row flex-col justify-center items-center px-10">
             <div className="flex justify-center items-center sm:block hidden">
@@ -34,8 +59,20 @@ function AboutSection() {
               </p>
             </div>
           </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-12 px-10">
+            {skills.map((skill, index) => (
+              <SkillCard
+                key={index}
+                icon={skill.icon}
+                title={skill.title}
+                description={skill.description}
+                delay={index * 0.2}
+              />
+            ))}
+          </div>
         </RevealOnScroll>
       </div>
+      {/* Skills Grid */}
     </section>
   );
 }

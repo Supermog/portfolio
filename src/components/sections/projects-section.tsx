@@ -94,9 +94,12 @@ function ProjectsSection() {
   const [lightboxImage, setLightboxImage] = useState("");
 
   return (
-    <section className="my-64 container min-w-full pswp-gallery" id="projects">
+    <section
+      className="mt-20 mb-40 container min-w-full pswp-gallery"
+      id="projects"
+    >
       <div className="flex justify-center items-center flex-col">
-        <div className="mb-10">
+        <div className="mb-10 px-10">
           <p className="text-xl text-cyan-300 mb-5">Projects</p>
           <p className="text-lg">
             These are some of the projects that I've worked on so far
@@ -106,7 +109,7 @@ function ProjectsSection() {
           {projects.map((project) => {
             return (
               <RevealOnScroll key={project.title}>
-                <div className="flex md:flex-row flex-col-reverse gap-10">
+                <div className="flex md:flex-row flex-col-reverse gap-10 items-center">
                   <img
                     src={project.image}
                     className="w-[400px] object-contain hover:cursor-pointer"
