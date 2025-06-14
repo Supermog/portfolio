@@ -13,7 +13,11 @@ function ContactSection() {
         <div className="flex gap-20 lg:flex-row flex-col">
           <div className="flex gap-5 sm:flex-row flex-col">
             <div className="flex h-min gap-5 items-center">
-              <img className="rounded-full h-[150px]" src={roundedSelfPic} />
+              <img
+                className="rounded-full h-[150px]"
+                alt="Self picture"
+                src={roundedSelfPic}
+              />
               <div className="mb-5 mt-5">
                 <p>Email:</p>
                 <a

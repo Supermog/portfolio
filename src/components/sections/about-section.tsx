@@ -33,7 +33,11 @@ function AboutSection() {
         <RevealOnScroll>
           <div className="flex gap-10 container md:flex-row flex-col justify-center items-center px-10">
             <div className="flex justify-center items-center sm:block hidden">
-              <img src={aboutSectionPic} className="h-[400px]" />
+              <img
+                src={aboutSectionPic}
+                alt="About me website builder image"
+                className="h-[400px]"
+              />
             </div>
             <div className="flex flex-col md:w-[70%]">
               <h2 className="text-xl text-cyan-300 mb-5">About Me</h2>
