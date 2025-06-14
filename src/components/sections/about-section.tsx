@@ -36,7 +36,7 @@ function AboutSection() {
               <img src={aboutSectionPic} className="h-[400px]" />
             </div>
             <div className="flex flex-col md:w-[70%]">
-              <p className="text-xl text-cyan-300 mb-5">About Me</p>
+              <h2 className="text-xl text-cyan-300 mb-5">About Me</h2>
               <p className="text-2xl mb-3">
                 A dedicated Full-Stack developer based in Hungary 📍
               </p>

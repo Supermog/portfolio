@@ -20,13 +20,13 @@ const SkillCard = ({
     >
       <div className="flex items-start space-x-4">
         <div className="p-3 rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 transform transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
-          <Icon className="w-6 h-6 text-cyan-400" />
+          <Icon aria-hidden="true" className="w-6 h-6 text-cyan-400" />
         </div>
 
         <div className="flex-1">
-          <h3 className="font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+          <p className="font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
             {title}
-          </h3>
+          </p>
           <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
             {description}
           </p>

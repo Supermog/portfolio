@@ -100,7 +100,7 @@ function ProjectsSection() {
     >
       <div className="flex justify-center items-center flex-col">
         <div className="mb-10 px-10">
-          <p className="text-xl text-cyan-300 mb-5">Projects</p>
+          <h2 className="text-xl text-cyan-300 mb-5">Projects</h2>
           <p className="text-lg">
             These are some of the projects that I've worked on so far
           </p>

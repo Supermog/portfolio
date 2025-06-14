@@ -5,7 +5,7 @@ function ContactSection() {
     <section id="contact" className="mb-40">
       <div className="flex justify-center items-center flex-col">
         <div className="mb-10 pb-20">
-          <p className="text-2xl text-cyan-300 mb-5">Contact</p>
+          <h2 className="text-2xl text-cyan-300 mb-5">Contact</h2>
           <p className="text-xl">
             Do you have any cool ideas to build? Let's chat!
           </p>
