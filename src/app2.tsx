@@ -17,6 +17,7 @@ function App() {
         <AboutSection />
         <ProjectsSection />
         <ContactSection />
+        asd
       </main>
     </div>
   );
