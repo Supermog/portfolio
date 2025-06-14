@@ -100,7 +100,7 @@ function ProjectsSection() {
     >
       <div className="flex justify-center items-center flex-col">
         <div className="mb-10 px-10">
-          <p className="text-xl text-cyan-300 mb-5">Projects</p>
+          <h2 className="text-xl text-cyan-300 mb-5">Projects</h2>
           <p className="text-lg">
             These are some of the projects that I've worked on so far
           </p>
@@ -112,6 +112,7 @@ function ProjectsSection() {
                 <div className="flex md:flex-row flex-col-reverse gap-10 items-center">
                   <img
                     src={project.image}
+                    alt={`Screenshot of ${project.title} project`}
                     className="w-[400px] object-contain hover:cursor-pointer"
                     onClick={() => setLightboxImage(project.image)}
                   />
@@ -122,7 +123,9 @@ function ProjectsSection() {
                     <div className="flex mt-5 gap-5">
                       {project.stack.map((stack) => (
                         <img
+                          key={stack.name}
                           src={stack.logo}
+                          alt={stack.name}
                           className="h-10 hover:cursor-pointer"
                           data-tooltip-id="technology"
                           data-tooltip-content={stack.name}
