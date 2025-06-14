@@ -7,6 +7,7 @@ function HomeSection() {
     <section className="h-screen flex flex-col">
       <img
         src={homeSectionBackground}
+        alt="Abstract background pattern"
         className="absolute object-cover min-h-screen w-full -z-10"
       />
       <div className="flex justify-center gap-24 h-full items-center self-center p-5 flex-col">
@@ -17,10 +18,14 @@ function HomeSection() {
             </h1>
             <p className="text-white  p-2 text-xl">
               Hi 👋, my name is Bálint Nagy-Zsugya and I'm a Full-Stack
-              JavaScript developer based in Hungary 🇭🇺
+              JavaScript developer with over 4 years of experience.
             </p>
           </div>
-          <img src={selfPic} className="h-96 rounded-3xl sm:block hidden" />
+          <img
+            src={selfPic}
+            alt="Portrait of Bálint Nagy-Zsugya"
+            className="h-96 rounded-3xl sm:block hidden"
+          />
         </div>
         <TechStack />
       </div>
