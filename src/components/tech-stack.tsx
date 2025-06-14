@@ -1,11 +1,11 @@
 import typescriptLogo from "@/assets/tech-stack-logos/typescript-logo.svg";
-import reactLogo from "@/assets/tech-stack-logos/react-logo.png";
-import tailwindLogo from "@/assets/tech-stack-logos/tailwind-logo.png";
-import nextJsLogo from "@/assets/tech-stack-logos/next-js-logo.png";
-import nestJsLogo from "@/assets/tech-stack-logos/nest-js-logo.png";
-import nodeJsLogo from "@/assets/tech-stack-logos/node-js-logo.png";
-import firebaseLogo from "@/assets/tech-stack-logos/firebase-logo.png";
-import mongodbLogo from "@/assets/tech-stack-logos/mongodb-logo.png";
+import reactLogo from "@/assets/tech-stack-logos/react-logo.svg";
+import tailwindLogo from "@/assets/tech-stack-logos/tailwind-logo.svg";
+import nextJsLogo from "@/assets/tech-stack-logos/next-js-logo.svg";
+import nestJsLogo from "@/assets/tech-stack-logos/nest-js-logo.svg";
+import nodeJsLogo from "@/assets/tech-stack-logos/node-js-logo.svg";
+import firebaseLogo from "@/assets/tech-stack-logos/firebase-logo.svg";
+import mongodbLogo from "@/assets/tech-stack-logos/mongodb-logo.svg";
 import { Tooltip } from "react-tooltip";
 
 function TechStack() {

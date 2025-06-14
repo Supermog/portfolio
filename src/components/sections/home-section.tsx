@@ -1,4 +1,4 @@
-import homeSectionBackground from "@/assets/newpic.jpg";
+import homeSectionBackground from "@/assets/landing-page-background.jpg";
 import selfPic from "@/assets/self-pic.jpg";
 import { TechStack } from "../tech-stack";
 

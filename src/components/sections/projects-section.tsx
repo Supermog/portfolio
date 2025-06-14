@@ -1,12 +1,12 @@
 import myExecutorBox from "@/assets/project-pics/myexecutorbox-overview.png";
 import blackfordSolutions from "@/assets/project-pics/blackford-solutions.png";
 import typeScriptLogo from "@/assets/tech-stack-logos/typescript-logo.svg";
-import reactLogo from "@/assets/tech-stack-logos/react-logo.png";
-import nestJsLogo from "@/assets/tech-stack-logos/nest-js-logo.png";
-import tailwindLogo from "@/assets/tech-stack-logos/tailwind-logo.png";
-import firebaseLogo from "@/assets/tech-stack-logos/firebase-logo.png";
-import airtableLogo from "@/assets/tech-stack-logos/airtable-logo.png";
-import nextJsLogo from "@/assets/tech-stack-logos/next-js-logo.png";
+import reactLogo from "@/assets/tech-stack-logos/react-logo.svg";
+import nestJsLogo from "@/assets/tech-stack-logos/nest-js-logo.svg";
+import tailwindLogo from "@/assets/tech-stack-logos/tailwind-logo.svg";
+import firebaseLogo from "@/assets/tech-stack-logos/firebase-logo.svg";
+import airtableLogo from "@/assets/tech-stack-logos/airtable-logo.svg";
+import nextJsLogo from "@/assets/tech-stack-logos/next-js-logo.svg";
 import prismicLogo from "@/assets/tech-stack-logos/prismic-logo.svg";
 import styledComponentsLogo from "@/assets/tech-stack-logos/styled-components.svg";
 import { FaUpRightFromSquare } from "react-icons/fa6";
@@ -16,7 +16,7 @@ import { useState } from "react";
 import { RevealOnScroll } from "../reveal-on-scroll";
 import perlegoKnowledgeBase from "@/assets/project-pics/perlego-knowledge-base.png";
 import scottlogic from "@/assets/project-pics/scottlogic.png";
-import nodeJsLogo from "@/assets/tech-stack-logos/node-js-logo.png";
+import nodeJsLogo from "@/assets/tech-stack-logos/node-js-logo.svg";
 
 const projects = [
   {
