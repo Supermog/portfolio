@@ -40,6 +40,8 @@ function AboutSection() {
                 src={aboutSectionPic}
                 alt="About me website builder image"
                 className="max-h-[400px] w-auto h-full object-contain"
+                width="400"
+                height="400"
               />
             </div>
             <div className="flex flex-col md:w-[70%]">

@@ -9,6 +9,8 @@ function HomeSection() {
         src={homeSectionBackground}
         alt="Abstract background pattern"
         className="absolute object-cover min-h-screen w-full -z-10"
+        width="1920"
+        height="1080"
       />
       <div className="flex justify-center gap-24 h-full items-center self-center p-5 flex-col">
         <div className="flex justify-center items-center gap-24 lg:-mt-20">
@@ -25,6 +27,8 @@ function HomeSection() {
             src={selfPic}
             alt="Portrait of Bálint Nagy-Zsugya"
             className="max-h-96 w-auto h-full rounded-3xl sm:block hidden object-contain"
+            width="384"
+            height="384"
           />
         </div>
         <TechStack />
