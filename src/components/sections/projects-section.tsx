@@ -113,7 +113,7 @@ function ProjectsSection() {
                   <img
                     src={project.image}
                     alt={`Screenshot of ${project.title} project`}
-                    className="w-[400px] object-contain hover:cursor-pointer"
+                    className="max-w-[400px] w-full h-auto object-contain hover:cursor-pointer"
                     onClick={() => setLightboxImage(project.image)}
                   />
                   <div>

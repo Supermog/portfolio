@@ -24,7 +24,7 @@ function HomeSection() {
           <img
             src={selfPic}
             alt="Portrait of Bálint Nagy-Zsugya"
-            className="h-96 rounded-3xl sm:block hidden"
+            className="max-h-96 w-auto h-full rounded-3xl sm:block hidden object-contain"
           />
         </div>
         <TechStack />

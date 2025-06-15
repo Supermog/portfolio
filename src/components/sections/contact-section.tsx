@@ -2,7 +2,7 @@ import roundedSelfPic from "@/assets/rounded-self-pic.webp";
 
 function ContactSection() {
   return (
-    <section id="contact" className="mb-40">
+    <section id="contact" className="mb-40 px-10">
       <div className="flex justify-center items-center flex-col">
         <div className="mb-10 pb-20">
           <h2 className="text-2xl text-cyan-300 mb-5">Contact</h2>
@@ -14,7 +14,7 @@ function ContactSection() {
           <div className="flex gap-5 sm:flex-row flex-col">
             <div className="flex h-min gap-5 items-center">
               <img
-                className="rounded-full h-[150px]"
+                className="rounded-full max-h-[150px] w-auto h-full object-contain"
                 alt="Self picture"
                 src={roundedSelfPic}
               />
