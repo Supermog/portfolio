@@ -18,16 +18,47 @@ import perlegoKnowledgeBase from "@/assets/project-pics/perlego-knowledge-base.w
 import scottlogic from "@/assets/project-pics/scottlogic.webp";
 import nodeJsLogo from "@/assets/tech-stack-logos/node-js-logo.svg";
 
-const projects = [
+interface Project {
+  image: string;
+  title: string;
+  description: string;
+  stack: { name: string; logo: string }[];
+  href: string;
+  role: string;
+}
+
+const techStackLogoSizes: Record<
+  Project["stack"][number]["name"],
+  { width: string; height: string }
+> = {
+  TypeScript: { width: "32.5", height: "32.5" },
+  React: { width: "32.5", height: "32.5" },
+  "Tailwind CSS": { width: "50", height: "32.5" },
+  NestJS: { width: "32.5", height: "32.5" },
+  Firebase: { width: "24", height: "32.5" },
+  NodeJS: { width: "29", height: "32.5" },
+  Airtable: { width: "32.5", height: "32.5" },
+  NextJS: { width: "32.5", height: "32.5" },
+  "Styled Component": { width: "32.5", height: "32.5" },
+  Prismic: { width: "32.5", height: "32.5" },
+};
+
+const projects: Project[] = [
   {
     image: myExecutorBox,
     title: "My Executor Box",
     description:
       "A platform to assist people with their estates. This app was made for older people to gather their assets/liabilities at the end of their lifes so when they pass their estates will be in order. This app also has an invitation system where a user might invite another user to see their estates.",
     stack: [
-      { name: "TypeScript", logo: typeScriptLogo },
+      {
+        name: "TypeScript",
+        logo: typeScriptLogo,
+      },
       { name: "React", logo: reactLogo },
-      { name: "Tailwind CSS", logo: tailwindLogo },
+      {
+        name: "Tailwind CSS",
+        logo: tailwindLogo,
+      },
       { name: "NestJS", logo: nestJsLogo },
       { name: "Firebase", logo: firebaseLogo },
     ],
@@ -40,9 +71,15 @@ const projects = [
     description:
       "Internal tool for a scottish corporation named Blackford Analysis. They have a database full of AI solutions for medical problems and they needed a way to filter through them in a user friendly way. They use this app at conventions. (due to it being an internal tool users can only be created manually in the database)",
     stack: [
-      { name: "TypeScript", logo: typeScriptLogo },
+      {
+        name: "TypeScript",
+        logo: typeScriptLogo,
+      },
       { name: "React", logo: reactLogo },
-      { name: "Tailwind CSS", logo: tailwindLogo },
+      {
+        name: "Tailwind CSS",
+        logo: tailwindLogo,
+      },
       { name: "Firebase", logo: firebaseLogo },
       { name: "NodeJS", logo: nodeJsLogo },
       { name: "Airtable", logo: airtableLogo },
@@ -115,22 +152,35 @@ function ProjectsSection() {
                     alt={`Screenshot of ${project.title} project`}
                     className="max-w-[400px] w-full h-auto object-contain hover:cursor-pointer"
                     onClick={() => setLightboxImage(project.image)}
+                    width="400"
+                    height="225"
+                    srcSet={`${project.image} 400w, ${project.image.replace(
+                      ".webp",
+                      "-small.webp"
+                    )} 200w`}
+                    sizes="(max-width: 768px) 200px, 400px"
                   />
                   <div>
                     <p className="text-lg mb-5">{project.title}</p>
                     <p className="text-gray-300">{project.description}</p>
                     <p className="mt-5">Role: {project.role}</p>
                     <div className="flex mt-5 gap-5">
-                      {project.stack.map((stack) => (
-                        <img
-                          key={stack.name}
-                          src={stack.logo}
-                          alt={stack.name}
-                          className="h-10 hover:cursor-pointer"
-                          data-tooltip-id="technology"
-                          data-tooltip-content={stack.name}
-                        />
-                      ))}
+                      {project.stack.map((stack) => {
+                        const techStackLogoSize =
+                          techStackLogoSizes[stack.name];
+                        return (
+                          <img
+                            key={stack.name}
+                            src={stack.logo}
+                            alt={stack.name}
+                            className="h-10 hover:cursor-pointer"
+                            data-tooltip-id="technology"
+                            data-tooltip-content={stack.name}
+                            width={techStackLogoSize.width}
+                            height={techStackLogoSize.height}
+                          />
+                        );
+                      })}
                     </div>
                     <div className="space-y-2 mt-5">
                       <a

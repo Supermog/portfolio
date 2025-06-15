@@ -17,6 +17,13 @@ function ContactSection() {
                 className="rounded-full max-h-[150px] w-auto h-full object-contain"
                 alt="Self picture"
                 src={roundedSelfPic}
+                width="150"
+                height="150"
+                srcSet={`${roundedSelfPic} 150w, ${roundedSelfPic.replace(
+                  ".webp",
+                  "-small.webp"
+                )} 75w`}
+                sizes="(max-width: 768px) 75px, 150px"
               />
               <div className="mb-5 mt-5">
                 <p>Email:</p>

@@ -40,6 +40,13 @@ function AboutSection() {
                 src={aboutSectionPic}
                 alt="About me website builder image"
                 className="max-h-[400px] w-auto h-full object-contain"
+                width="400"
+                height="400"
+                srcSet={`${aboutSectionPic} 400w, ${aboutSectionPic.replace(
+                  ".webp",
+                  "-small.webp"
+                )} 200w`}
+                sizes="(max-width: 768px) 200px, 400px"
               />
             </div>
             <div className="flex flex-col md:w-[70%]">
