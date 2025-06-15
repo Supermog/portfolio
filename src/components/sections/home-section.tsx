@@ -16,6 +16,7 @@ function HomeSection() {
           "-small.webp"
         )} 960w`}
         sizes="100vw"
+        loading="eager"
       />
       <div className="flex justify-center gap-24 h-full items-center self-center p-5 flex-col">
         <div className="flex justify-center items-center gap-24 lg:-mt-20">
