@@ -40,6 +40,7 @@ function HomeSection() {
               "-small.webp"
             )} 192w`}
             sizes="(max-width: 768px) 192px, 384px"
+            loading="eager"
           />
         </div>
         <TechStack />
