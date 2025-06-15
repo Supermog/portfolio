@@ -154,6 +154,11 @@ function ProjectsSection() {
                     onClick={() => setLightboxImage(project.image)}
                     width="400"
                     height="225"
+                    srcSet={`${project.image} 400w, ${project.image.replace(
+                      ".webp",
+                      "-small.webp"
+                    )} 200w`}
+                    sizes="(max-width: 768px) 200px, 400px"
                   />
                   <div>
                     <p className="text-lg mb-5">{project.title}</p>

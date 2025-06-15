@@ -11,6 +11,11 @@ function HomeSection() {
         className="absolute object-cover min-h-screen w-full -z-10"
         width="1920"
         height="1080"
+        srcSet={`${homeSectionBackground} 1920w, ${homeSectionBackground.replace(
+          ".webp",
+          "-small.webp"
+        )} 960w`}
+        sizes="100vw"
       />
       <div className="flex justify-center gap-24 h-full items-center self-center p-5 flex-col">
         <div className="flex justify-center items-center gap-24 lg:-mt-20">
@@ -29,6 +34,11 @@ function HomeSection() {
             className="max-h-96 w-auto h-full rounded-3xl sm:block hidden object-contain"
             width="384"
             height="384"
+            srcSet={`${selfPic} 384w, ${selfPic.replace(
+              ".webp",
+              "-small.webp"
+            )} 192w`}
+            sizes="(max-width: 768px) 192px, 384px"
           />
         </div>
         <TechStack />
