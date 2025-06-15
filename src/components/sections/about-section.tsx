@@ -1,4 +1,4 @@
-import aboutSectionPic from "@/assets/about-section-pic.png";
+import aboutSectionPic from "@/assets/about-section-pic.webp";
 import { RevealOnScroll } from "../reveal-on-scroll";
 import { Code, Globe, Users, Lightbulb } from "lucide-react";
 import SkillCard from "../skill-card";

@@ -1,4 +1,4 @@
-import roundedSelfPic from "@/assets/rounded-self-pic.jpg";
+import roundedSelfPic from "@/assets/rounded-self-pic.webp";
 
 function ContactSection() {
   return (

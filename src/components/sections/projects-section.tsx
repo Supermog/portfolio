@@ -1,5 +1,5 @@
-import myExecutorBox from "@/assets/project-pics/myexecutorbox-overview.png";
-import blackfordSolutions from "@/assets/project-pics/blackford-solutions.png";
+import myExecutorBox from "@/assets/project-pics/myexecutorbox-overview.webp";
+import blackfordSolutions from "@/assets/project-pics/blackford-solutions.webp";
 import typeScriptLogo from "@/assets/tech-stack-logos/typescript-logo.svg";
 import reactLogo from "@/assets/tech-stack-logos/react-logo.svg";
 import nestJsLogo from "@/assets/tech-stack-logos/nest-js-logo.svg";
@@ -14,8 +14,8 @@ import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import { useState } from "react";
 import { RevealOnScroll } from "../reveal-on-scroll";
-import perlegoKnowledgeBase from "@/assets/project-pics/perlego-knowledge-base.png";
-import scottlogic from "@/assets/project-pics/scottlogic.png";
+import perlegoKnowledgeBase from "@/assets/project-pics/perlego-knowledge-base.webp";
+import scottlogic from "@/assets/project-pics/scottlogic.webp";
 import nodeJsLogo from "@/assets/tech-stack-logos/node-js-logo.svg";
 
 const projects = [

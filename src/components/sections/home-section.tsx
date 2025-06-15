@@ -1,5 +1,5 @@
 import homeSectionBackground from "@/assets/landing-page-background.webp";
-import selfPic from "@/assets/self-pic.jpg";
+import selfPic from "@/assets/self-pic.webp";
 import { TechStack } from "../tech-stack";
 
 function HomeSection() {
