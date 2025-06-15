@@ -28,7 +28,10 @@ const skills = [
 
 function AboutSection() {
   return (
-    <section className="bg-gray-950 md:py-10 py-20" id="about">
+    <section
+      className="bg-gradient-to-b from-gray-900 to-black md:py-10 py-20"
+      id="about"
+    >
       <div className="flex items-center justify-center my-10">
         <RevealOnScroll>
           <div className="flex gap-10 container md:flex-row flex-col justify-center items-center px-10">
@@ -36,7 +39,7 @@ function AboutSection() {
               <img
                 src={aboutSectionPic}
                 alt="About me website builder image"
-                className="h-[400px]"
+                className="max-h-[400px] w-auto h-full object-contain"
               />
             </div>
             <div className="flex flex-col md:w-[70%]">
