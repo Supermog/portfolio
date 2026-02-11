@@ -1,4 +1,5 @@
 import homeSectionBackground from "@/assets/landing-page-background.webp";
+import homeSectionBackgroundSmall from "@/assets/landing-page-background-small.webp";
 import selfPic from "@/assets/self-pic.webp";
 import { TechStack } from "../tech-stack";
 
@@ -6,15 +7,12 @@ function HomeSection() {
   return (
     <section className="h-screen flex flex-col">
       <img
-        src={homeSectionBackground}
+        src={homeSectionBackgroundSmall}
         alt="Abstract background pattern"
         className="absolute object-cover min-h-screen w-full -z-10"
         width="1920"
         height="1080"
-        srcSet={`${homeSectionBackground} 1920w, ${homeSectionBackground.replace(
-          ".webp",
-          "-small.webp"
-        )} 960w`}
+        srcSet={`${homeSectionBackground} 1920w, ${homeSectionBackgroundSmall} 960w`}
         sizes="100vw"
         loading="eager"
       />
@@ -37,7 +35,7 @@ function HomeSection() {
             height="384"
             srcSet={`${selfPic} 384w, ${selfPic.replace(
               ".webp",
-              "-small.webp"
+              "-small.webp",
             )} 192w`}
             sizes="(max-width: 768px) 192px, 384px"
             loading="eager"
