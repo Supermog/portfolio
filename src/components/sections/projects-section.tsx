@@ -23,7 +23,7 @@ interface Project {
   title: string;
   description: string;
   stack: { name: string; logo: string }[];
-  href: string;
+  href?: string;
   role: string;
 }
 
@@ -63,7 +63,7 @@ const projects: Project[] = [
       { name: "Firebase", logo: firebaseLogo },
     ],
     href: "https://app.myexecutorbox.co.uk/",
-    role: "Lead Frontend developer",
+    role: "Frontend developer",
   },
   {
     image: blackfordSolutions,
@@ -84,8 +84,7 @@ const projects: Project[] = [
       { name: "NodeJS", logo: nodeJsLogo },
       { name: "Airtable", logo: airtableLogo },
     ],
-    href: "https://blackford-navigator.netlify.app/",
-    role: "Lead Frontend developer",
+    role: "Frontend developer",
   },
   {
     image: perlegoKnowledgeBase,
@@ -156,7 +155,7 @@ function ProjectsSection() {
                     height="225"
                     srcSet={`${project.image} 400w, ${project.image.replace(
                       ".webp",
-                      "-small.webp"
+                      "-small.webp",
                     )} 200w`}
                     sizes="(max-width: 768px) 200px, 400px"
                   />
@@ -182,16 +181,18 @@ function ProjectsSection() {
                         );
                       })}
                     </div>
-                    <div className="space-y-2 mt-5">
-                      <a
-                        className="flex items-center gap-2 w-fit"
-                        href={project.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Live Demo <FaUpRightFromSquare />
-                      </a>
-                    </div>
+                    {project.href && (
+                      <div className="space-y-2 mt-5">
+                        <a
+                          className="flex items-center gap-2 w-fit"
+                          href={project.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Live Demo <FaUpRightFromSquare />
+                        </a>
+                      </div>
+                    )}
                   </div>
                 </div>
               </RevealOnScroll>

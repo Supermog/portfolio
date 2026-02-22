@@ -20,11 +20,11 @@ function HomeSection() {
         <div className="flex justify-center items-center gap-24 lg:-mt-20">
           <div className="flex flex-col max-w-xl gap-3">
             <h1 className="text-4xl text-white  p-2 rounded-md">
-              JavaScript Full-Stack Developer
+              Full-Stack TypeScript Developer
             </h1>
             <p className="text-white  p-2 text-xl">
-              Hi 👋, my name is Bálint Nagy-Zsugya and I'm a Full-Stack
-              JavaScript developer with over 4 years of experience.
+              Hi 👋, my name is Bálint Nagy-Zsugya and I'm a Full-Stack Software
+              Engineer with over 4 years of experience.
             </p>
           </div>
           <img
